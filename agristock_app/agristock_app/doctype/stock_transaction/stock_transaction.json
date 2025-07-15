@@ -8,10 +8,13 @@
  "field_order": [
   "date",
   "farm",
-  "item",
+  "item_name",
   "quantity",
-  "type",
   "uom",
+  "type",
+  "supplier",
+  "supplier_rate",
+  "total_price",
   "remarks",
   "amended_from"
  ],
@@ -22,24 +25,17 @@
    "label": "Date"
   },
   {
-   "fieldname": "item",
-   "fieldtype": "Link",
-   "label": "Item",
-   "options": "Inventory Item",
-   "reqd": 1
-  },
-  {
    "fieldname": "farm",
    "fieldtype": "Link",
    "label": "Farm",
-   "options": "Farm",
+   "options": "Farms",
    "reqd": 1
   },
   {
    "fieldname": "type",
    "fieldtype": "Select",
    "label": "Type",
-   "options": "In\nOut"
+   "options": "In(New Stock Incoming)\nOut(Used or Lost)"
   },
   {
    "fieldname": "quantity",
@@ -69,13 +65,36 @@
    "fieldtype": "Link",
    "label": "UOM",
    "options": "UOM"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "label": "Total Price"
+  },
+  {
+   "fieldname": "supplier_rate",
+   "fieldtype": "Currency",
+   "label": "Supplier's Rate/KG/L/Piece"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Inventory Item",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-07-14 11:57:51.263830",
+ "modified": "2025-07-15 22:47:13.920912",
  "modified_by": "Administrator",
  "module": "Agristock App",
  "name": "Stock Transaction",

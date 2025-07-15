@@ -1,14 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "field:supplier_name",
  "creation": "2025-07-12 18:13:40.104102",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "supplier_name",
   "contact",
-  "location"
+  "location",
+  "supplied_items"
  ],
  "fields": [
   {
@@ -16,11 +17,12 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Supplier Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "contact",
-   "fieldtype": "Data",
+   "fieldtype": "Phone",
    "in_list_view": 1,
    "label": "Contact",
    "reqd": 1
@@ -31,16 +33,22 @@
    "in_list_view": 1,
    "label": "Location",
    "reqd": 1
+  },
+  {
+   "fieldname": "supplied_items",
+   "fieldtype": "Table",
+   "label": "Supplied Items",
+   "options": "Supplied Items"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-14 11:56:55.876596",
+ "modified": "2025-07-15 22:18:37.170780",
  "modified_by": "Administrator",
  "module": "Agristock App",
  "name": "Supplier",
- "naming_rule": "Set by user",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,29 +1,20 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "PR-.###",
  "creation": "2025-07-12 18:20:41.146603",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "item",
+  "item_name",
   "quantity",
   "required_by",
   "farm",
   "farm_manager",
-  "location",
-  "supplier",
   "status",
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "item",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Item",
-   "options": "Inventory Item",
-   "reqd": 1
-  },
   {
    "fieldname": "quantity",
    "fieldtype": "Float",
@@ -44,14 +35,15 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Farm",
-   "options": "Farm",
+   "options": "Farms",
    "reqd": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Pending\nApproved\nRejected"
+   "options": "For Supplier Office Use Only\nPending\nApproved\nRejected",
+   "placeholder": "Only for Supplier use"
   },
   {
    "fieldname": "amended_from",
@@ -69,26 +61,22 @@
    "label": "Farm Manager"
   },
   {
-   "fieldname": "location",
-   "fieldtype": "Data",
-   "label": "Location",
-   "reqd": 1
-  },
-  {
-   "fieldname": "supplier",
+   "fieldname": "item_name",
    "fieldtype": "Link",
-   "label": "Supplier",
-   "options": "Supplier"
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Inventory Item",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-07-14 11:55:12.235502",
+ "modified": "2025-07-15 23:08:41.457337",
  "modified_by": "Administrator",
  "module": "Agristock App",
  "name": "Purchase Request",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {

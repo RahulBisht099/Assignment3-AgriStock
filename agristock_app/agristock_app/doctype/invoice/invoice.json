@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:BILL-{####}",
+ "creation": "2025-07-15 16:26:41.144872",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_date",
+  "supplier",
+  "customer",
+  "item_name",
+  "quantity",
+  "rate",
+  "total",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Datetime",
+   "label": "Date"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "label": "Item Name",
+   "options": "Inventory Item"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer",
+   "options": "Farm"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Pending\nPaid"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-15 23:16:50.081078",
+ "modified_by": "Administrator",
+ "module": "Agristock App",
+ "name": "Invoice",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
